@@ -1,19 +1,9 @@
-access (man 2 access)
-chdir (man 2 chdir)
-close (man 2 close)
-closedir (man 3 closedir)
-execve (man 2 execve)
-exit (man 3 exit)
-_exit (man 2 _exit)
-fflush (man 3 fflush)
-fork (man 2 fork)
-free (man 3 free)
-getcwd (man 3 getcwd)
-getline (man 3 getline)
-getpid (man 2 getpid)
-isatty (man 3 isatty)
-kill (man 2 kill)
-malloc (man 3 malloc)
-open (man 2 open)
-opendir (man 3 opendir)
-perror (man 3 perror)
+# This is a team work project where the main goal is to create some shell programs from scratch.
+
+# The purpose of the project is to test us if we have understood the concepts of C language that we have learnt during the first sprint.
+
+# The project uses C programming language, shell scripting, and a tool called Betty to check ALX programing standards
+
+# The project tasks are compiled using: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+# This project is done by two authors. check the AUTHORS file included in the repository.
