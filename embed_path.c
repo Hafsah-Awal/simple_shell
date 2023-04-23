@@ -19,7 +19,7 @@ char *get_full_path(char *path, char *cmd)
 	if (path == 0)
 		path = "";
 
-	buf = malloc(sizeof(char) * (_strlen(path) + _strlen(cmd) + 2));
+	buf = malloc(sizeof(char) * (string_length(path) + string_length(cmd) + 2));
 	if (!buf)
 		return (NULL);
 
