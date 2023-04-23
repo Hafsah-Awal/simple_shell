@@ -70,7 +70,7 @@ char *duplicate_string(char *s)
 	if (s == NULL)
 		return (NULL);
 
-	len = _strlen(s);
+	len = string_length(s);
 
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (!ptr)
