@@ -13,19 +13,19 @@ char **tokenize_input(char *ln)
 	int tokensize = 1;
 	size_t index = 0, flag = 0;
 
-	buf = _strdup(ln);
+	buf = duplicate_string(ln);
 	if (!buf)
 		return (NULL);
 	bufp = buf;
 
 	while (*bufp)
 	{
-		if (_strchr(delim, *bufp) != NULL && flag == 0)
+		if (find_char(delim, *bufp) != NULL && flag == 0)
 		{
 			tokensize++;
 			flag = 1;
 		}
-		else if (_strchr(delim, *bufp) == NULL && flag == 1)
+		else if (find_char(delim, *bufp) == NULL && flag == 1)
 			flag = 0;
 		bufp++;
 	}
@@ -33,7 +33,7 @@ char **tokenize_input(char *ln)
 	token = strtok(buf, delim);
 	while (token)
 	{
-		tokens[index] = _strdup(token);
+		tokens[index] = duplicate_string(token);
 		if (tokens[index] == NULL)
 		{
 			free(tokens);
