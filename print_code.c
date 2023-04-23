@@ -1,13 +1,13 @@
 #include "head.h"
 
 /**
- * print_char - prints a single character to stdout
+ * _putchar - prints a single character to stdout
  * @c: The character to print
  * Return: On success 1.
  * On error, -1 is returned and errno set appropriately
 */
 
-int print_char(char c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
