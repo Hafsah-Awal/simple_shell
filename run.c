@@ -1,13 +1,13 @@
 #include "head.h"
 
 /**
-* execute_command - Executes the command passed by the user
-* @cp: Command to be executed
-* @cmd: Vector array of pointers to commands
-* Return: 0 on success, -1 on failure
-*/
+ * execute_command - Executes the command passed by the user
+ * @cp: Command to be executed
+ * @command: Vector array of pointers to commands
+ * Return: 0 on success, -1 on failure
+ */
 
-void execute_command(char *cp, char **cmd)
+void execute_command(char *cp, char **command)
 {
 	pid_t child_pid;
 	int status;
@@ -18,12 +18,13 @@ void execute_command(char *cp, char **cmd)
 		perror(cp);
 	if (child_pid == 0)
 	{
-		execve(cp, cmd, env);
+		execve(cp, command, env);
 		perror(cp);
 		free(cp);
-		free_buffers(cmd);
+		free_buffers(command);
 		exit(98);
 	}
 	else
 		wait(&status);
 }
+

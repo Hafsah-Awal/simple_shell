@@ -2,18 +2,18 @@
 
 /**
  * tokenize_input - Splits a string into tokens.
- * @ln: String to be tokenized
+ * @line: String to be tokenized
  * Return: Array of strings containing the tokens.
-*/
+ */
 
-char **tokenize_input(char *ln)
+char **tokenize_input(char *line)
 {
 	char *buf = NULL, *bufp = NULL, *token = NULL, *delim = " :\t\r\n";
 	char **tokens = NULL;
 	int tokensize = 1;
 	size_t index = 0, flag = 0;
 
-	buf = duplicate_string(ln);
+	buf = duplicate_string(line);
 	if (!buf)
 		return (NULL);
 	bufp = buf;
