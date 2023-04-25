@@ -169,7 +169,7 @@ int _getline(info_t *, char **, size_t *);
 void signal_handler(int);
 
 void clean_info(info_t *);
-void set_info(info_t *, char **);
+void initialize_info(info_t *, char **);
 void free_info(info_t *, int);
 
 char *_getenv(info_t *, const char *);
