@@ -107,6 +107,8 @@ typedef struct builtin
 	int (*func)(info_t *);
 } builtin_table;
 
+void reset_to_98(int *n);
+
 int main_shell(info_t *, char **);
 int find_builtin(info_t *);
 void find_command(info_t *);
