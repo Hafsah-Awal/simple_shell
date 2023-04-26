@@ -1,14 +1,13 @@
 #include <stdio.h>
-
 /**
- * main - Entry point for the program
- *
- * Return: Always 0 (Success)
- */
+*  reset_to_98 - takes the pointer and updates the value
+*  @n: int to check
+*  Owned by Hafsah/Victor
+*  Return: 0 is success
+*/
 
-int main(void)
+void reset_to_98(int *n)
 {
-	printf("Hello, world!\n");
-	return (0);
+	*n = 98;
 }
 
