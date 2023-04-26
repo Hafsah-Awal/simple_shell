@@ -1,14 +1,16 @@
 #include "head.h"
 
 /**
-*  reset_to_98 - takes the pointer and updates the value
-*  @n: int to check
+*  print_message - prints a message
+*  @s: string to print
 *  Owned by Hafsah/Victor
 *  Return: 0 is success
 */
 
-void reset_to_98(int *n)
+void print_message(char s)
 {
-	*n = 98;
+	int message_len = strlen(&s);
+
+	write(STDOUT_FILENO, &s, message_len);
 }
 
